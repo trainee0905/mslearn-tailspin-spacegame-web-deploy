@@ -80,7 +80,7 @@ stages:
           deploy: 
             steps: 
             - download: current 
-              artifact: drop git add azure-pipelines.yml
+              artifact: drop
             - task: AzureWebApp@1 
               displayName: 'Azure App Service Deploy: website'
               inputs: 
