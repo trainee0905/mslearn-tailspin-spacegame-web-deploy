@@ -1,6 +1,9 @@
 trigger:
   - "*"
 
+variables:
+  buildConfiguration: "Release"
+
 stages:
   - stage: "Build"
     displayName: "Build the web application"
@@ -12,10 +15,9 @@ stages:
           demands:
           - npm
 
-variables:
-  buildConfiguration: "Release"
-  wwwrootDir: "Tailspin.SpaceGame.Web/wwwroot"
-  dotnetSdkVersion: "5.x"
+        variables:
+          wwwrootDir: "Tailspin.SpaceGame.Web/wwwroot"
+          dotnetSdkVersion: "5.x"
 
 steps:
   - task: UseDotNet@2
