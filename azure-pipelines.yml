@@ -10,7 +10,7 @@ stages:
         pool:
           vmImage: "ubuntu-20.04"
           demands:
-            - npm
+          - npm
 
 variables:
   buildConfiguration: "Release"
